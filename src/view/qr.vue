@@ -28,24 +28,11 @@ export default {
       startRecognize () {
         let that = this
         if (!window.plus) return
-        scan = new plus.barcode.Barcode('bcid')
+        scan = new plus.barcode.Barcode('bcid',[plus.barcode.CODE39,plus.barcode.CODE128,plus.barcode.QR])
         scan.onmarked = onmarked
 
         function onmarked (type, result, file) {
-          switch (type) {
-            case plus.barcode.QR:
-              type = 'QR'
-              break
-            case plus.barcode.EAN13:
-              type = 'EAN13'
-              break
-            case plus.barcode.EAN8:
-              type = 'EAN8'
-              break
-            default:
-              type = '其它' + type
-              break
-          }
+
           result = result.replace(/\n/g, '')
           that.codeUrl = result
           that.closeScan();

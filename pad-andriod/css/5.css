@@ -1,0 +1,390 @@
+
+#ddr[data-v-0aee9489] {
+  margin: 0 auto;
+  width: 70px;
+  height: 120px;
+}
+.ddr[data-v-0aee9489] {
+  width: 5px;
+  height: 60px;
+  float: left;
+  margin: 2px;
+  background-color: #999;
+  -webkit-animation: loading-data-v-0aee9489 1s infinite ease-in-out;
+          animation: loading-data-v-0aee9489 1s infinite ease-in-out; /*animation：动画名称 持续时间 动画速度曲线 延迟 执行多少次 是否正反方向轮流播放*/
+}
+.ddr2[data-v-0aee9489] {
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s; /*定义开始执行的地方，负号表示直接从第900ms开始执行*/
+}
+.ddr3[data-v-0aee9489] {
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+.ddr4[data-v-0aee9489] {
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+.ddr5[data-v-0aee9489] {
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+}
+@-webkit-keyframes loading-data-v-0aee9489 {
+0%, 40%, 100% {
+/*定义每帧的动作*/
+    -webkit-transform: scaleY(0.5);
+}
+20% {
+    -webkit-transform: scaleY(1);
+}
+}
+@keyframes loading-data-v-0aee9489 {
+0%, 40%, 100% {
+/*定义每帧的动作*/
+    -webkit-transform: scaleY(0.5);
+}
+20% {
+    -webkit-transform: scaleY(1);
+}
+}
+
+
+.title[data-v-a417e9d4] {
+  height: 40px;
+  line-height: 40px;
+  background-color: #8fbc8f;
+  text-align: center;
+}
+#loading[data-v-a417e9d4] {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.3);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.mark[data-v-100d77b3] {
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+/*background-color: rgba(200,200,200,0.1);*/
+}
+.mark .alert-content[data-v-100d77b3] {
+  width: 305px;
+  border: 1px solid #000;
+  margin: 200px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+}
+.alert-content p[data-v-100d77b3] {
+  font-size: 14px;
+  line-height: 14px;
+  color: #000;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+.button-box[data-v-100d77b3] {
+  overflow: hidden;
+}
+.button-box>div[data-v-100d77b3] {
+  float: left;
+  width: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+.alert-content .button-box button[data-v-100d77b3] {
+  width: 70px;
+  height: 34px;
+  border: 1px solid #bebebe;
+  color: #0c0c0c;
+  border-radius: 3px;
+  margin: 10px 30px;
+}
+.button-box button.false[data-v-100d77b3] {
+  background-color: transparent;
+}
+.alert-content .button-box button[data-v-100d77b3]:hover {
+  cursor: pointer;
+}
+
+
+.mark[data-v-6b6405af] {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 40%;
+}
+.mark>span[data-v-6b6405af] {
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+/* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  background-color: #fff;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+textarea {
+  outline: none;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto 9; /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic; /*为了照顾ie图片缩放失真*/
+}
+input,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+select {
+  background: #fff;
+  color: #333;
+/*background-image:url('../img/up.png');*/
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 0.5rem 100%;
+/*background: url('../../img/up.png') no-repeat right center;*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 'Microsoft YaHei', '\5B8B\4F53', Tahoma, Arial, sans-serif;
+  color: #333;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+}
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+/* -webkit-line-clamp: 2; */
+}
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,
+a:active,
+a:visited,
+a:hover {
+  background: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+.w20 {
+  width: 20%;
+}
+.w33 {
+  width: 33.333333%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.db {
+  display: block !important;
+}
+.dn {
+  display: none;
+}
+.clear:after {
+  content: ".";
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+.cursor {
+  cursor: pointer;
+}
+/*组件切换的动画*/
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+/* .fade-leave-active in <2.1.8 */
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
