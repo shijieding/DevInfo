@@ -7,7 +7,16 @@
         </div>-->
     <div class="tbody blank" v-show="list.length === 0"></div>
     <div class="tab" v-show="list.length > 0">
-      <div class="thead">
+      <div class="td" style="background-color: #999999">
+        <div class="f1">{{now.Ltime}}</div>
+        <div class="f2">{{now.O2}}</div>
+        <div class="f3">{{now.NH3}}</div>
+        <div class="f4">{{now.CO2}}</div>
+        <div class="f4">{{now.PM10}}</div>
+        <div class="f4">{{now.Humidity}}</div>
+        <div class="f4">{{now.Temperature}}</div>
+      </div>
+      <div class="thead" style="border-top: none;">
         <div class="f1">时间<br>北京时间</div>
         <div class="f2">O2<br>%</div>
         <div class="f3">NH3<br>ppm</div>
@@ -36,6 +45,7 @@
       data() {
         return {
           list:[],
+          now:null
         }
       },
       mounted () {
@@ -47,8 +57,9 @@
             this.device = n;
           if(this.device) {
             this.http.get('/api/device/environment?device='+this.device).then(msg=>{
-              this.list = msg.data.Result;
-
+              this.list = msg.data.Result.HistoryEnvironment;
+              this.now = msg.data.Result.CurrentEnvironment;
+              console.log(this.now)
             }).catch(err=>{
 
             })
@@ -113,7 +124,18 @@
       }
     }
   }
-
+  .td {
+    display:flex;
+    border-left 1px solid #ccc;
+    div {
+      height:24px;
+      line-height 24px;
+      text-align center;
+      border-right:1px solid #ccc;
+      border-bottom:1px solid #ccc;
+      font-size 12px;
+    }
+  }
   .top {
     display:flex;
     justify-content space-around
